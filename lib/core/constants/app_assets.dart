@@ -14,4 +14,5 @@ class AppAssets{
   static const priceCard3 = "assets/images/price_card3.webp";
   static const playStoreSvg = "assets/images/play_store.svg";
   static const appsStoreSvg = "assets/images/app_store.svg";
+  static const mainLogoIcon = "assets/images/main_logo_icon.webp";
 }

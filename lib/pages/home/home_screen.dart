@@ -7,6 +7,7 @@ import 'package:invatation/pages/home/section/home_section_6.dart';
 import 'package:sizer/sizer.dart';
 import '../../constant.dart';
 import '../../core/widget_export.dart';
+import '../footer/web_footer.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +21,10 @@ class HomeScreen extends StatelessWidget {
         shrinkWrap: true,
         padding: EdgeInsets.all(8.w),
         children: [
+
+          WebFooter(),
           // section 1
+
          _headerSection(context),
           SizedBox(height: defaultSpacing*2),
           _rowHeading(text: "مـيـزايا",path: AppAssets.logo),
