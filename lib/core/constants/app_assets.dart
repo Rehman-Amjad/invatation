@@ -15,4 +15,7 @@ class AppAssets{
   static const playStoreSvg = "assets/images/play_store.svg";
   static const appsStoreSvg = "assets/images/app_store.svg";
   static const mainLogoIcon = "assets/images/main_logo_icon.webp";
+  static const faqImage = "assets/images/faq_image.webp";
+  static const mobileImage = "assets/images/mobile_image.webp";
+  static const testimonialImage = "assets/images/testimonial.webp";
 }

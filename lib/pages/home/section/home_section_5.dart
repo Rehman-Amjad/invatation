@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';
@@ -22,30 +24,10 @@ class HomeSection5 extends StatelessWidget {
             ),
             itemCount: AppStrings.cardList.length,
             itemBuilder: (context, index) {
-              return FutureBuilder(
-                future: _loadImage(AppStrings.cardList[index]["icon"].toString()),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.done) {
-                    // Image loaded successfully
-                    return _boxDesign(
-                      path: AppStrings.cardList[index]["icon"].toString(),
-                      title: AppStrings.cardList[index]["title"].toString(),
-                      subtitle: AppStrings.cardList[index]["subtitle"].toString(),
-                    );
-                  } else {
-                    // Show shimmer effect while loading
-                    return Shimmer.fromColors(
-                      baseColor: Colors.grey[300]!,
-                      highlightColor: Colors.grey[100]!,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(2.w),
-                        ),
-                      ),
-                    );
-                  }
-                },
+              return  _boxDesign(
+                path: AppStrings.cardList[index]["icon"].toString(),
+                title: AppStrings.cardList[index]["text"].toString(),
+                subtitle: AppStrings.cardList[index]["subTitle"].toString(),
               );
             },
           ),
@@ -54,9 +36,6 @@ class HomeSection5 extends StatelessWidget {
     );
   }
 
-  Future<void> _loadImage(String assetPath) async {
-    await Future.delayed(const Duration(milliseconds: 100));
-  }
 
   Widget _boxDesign({required String path,required String title,required String subtitle}){
     return Container(
@@ -77,16 +56,16 @@ class HomeSection5 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(AppIcons.personIcon,width: 10.w,height: 10.w,),
+          Image.asset(path,width: 10.w,height: 10.w,),
           SizedBox(height: 1.w,),
           AppTextWidget(
-              text: "مشرفين",
-              fontSize: 4.sp,
+              text: title,
+              fontSize: 6.sp,
             fontWeight: FontWeight.bold,
           ),
           SizedBox(height: 1.w,),
           AppTextWidget(
-            text: "مشرفين بزي موحد",
+            text: subtitle,
             fontSize: 3.sp,
           )
         ],

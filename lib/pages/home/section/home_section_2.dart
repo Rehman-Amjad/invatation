@@ -13,6 +13,7 @@ class HomeSection2 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
+          flex: 2,
           child: Column(
             children: [
               SizedBox(height: 2.w,),
@@ -23,10 +24,8 @@ class HomeSection2 extends StatelessWidget {
             ],
           ),
         ),
-
-        SizedBox(width: 1.w,),
         Expanded(
-          flex: 2,
+          flex: 3,
           child: ListView.separated(
               shrinkWrap: true,
               itemCount: AppStrings.infoPointsList.length,
@@ -61,9 +60,10 @@ class HomeSection2 extends StatelessWidget {
                     child: Center(child: SvgPicture.asset(AppIcons.checkSvg,fit: BoxFit.cover,)))
               ],
             );
-          },separatorBuilder: (context, index){
-                return SizedBox(height: 2.w,);
           },
+            separatorBuilder: (context, index){
+                return SizedBox(height: 2.w,);
+           },
           ),
         )
 

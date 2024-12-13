@@ -11,14 +11,12 @@ class HomeSection4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal:  5.w),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+      child: Stack(
         children: [
-          // Step 1
           Stack(
             children: [
               Row(
-               mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   SizedBox(
                     width: 40.w,
@@ -28,26 +26,26 @@ class HomeSection4 extends StatelessWidget {
                         Align(
                           alignment: AlignmentDirectional.centerEnd,
                           child: AppTextWidget(
-                           text:  'انشاء الدعوة',
-                              fontSize: 7.sp,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.gold,
+                            text:  'انشاء الدعوة',
+                            fontSize: 7.sp,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.gold,
                             textAlign: TextAlign.end,
-                            ),
+                          ),
                         ),
                         SizedBox(height: 1.h),
                         AppTextWidget(
                           text: 'بعد طلب دعوتك، سيتم التواصل معك خلال ساعات للحصول على معلومات المناسبة والدعوة.',
                           fontSize: 5.sp,
                           textAlign: TextAlign.end,
-                          ),
+                        ),
                       ],
                     ),
                   ),
                   SizedBox(width: 1.w),
                   _countImage(
-                      path: AppIcons.count1Svg,
-                      width: 11.w,
+                    path: AppIcons.count1Svg,
+                    width: 11.w,
                   ),
                 ],
               ),
@@ -56,21 +54,25 @@ class HomeSection4 extends StatelessWidget {
 
           // Step 2
           Transform.translate(
-            offset: Offset(-2.w, -12.w),
+            offset: Offset(-11.w, 14.w),
             child: Stack(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    _countImage(
-                      path: AppIcons.count2Svg,
-                      width: 15.w,
+                    Transform.translate(
+                      offset: Offset(6.w, 0),
+                      child: _countImage(
+                        path: AppIcons.count2Svg,
+                        width: 15.w,
+                      ),
                     ),
                     SizedBox(width: 1.w),
                     SizedBox(
                       width: 40.w,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Align(
                             alignment: AlignmentDirectional.centerEnd,
@@ -84,7 +86,7 @@ class HomeSection4 extends StatelessWidget {
                           ),
                           SizedBox(height: 1.h),
                           AppTextWidget(
-                            text: 'يمكنك اختيار القالب و تخصيص محتوى الدعوة بما يناسب مناسبتك',
+                            text: 'يمكنك اختيار القالب و تخصيص محتوى الدعوة\n بما يناسب مناسبتك',
                             fontSize: 5.sp,
                             textAlign: TextAlign.end,
                           ),
@@ -101,7 +103,7 @@ class HomeSection4 extends StatelessWidget {
 
           // Step 3
           Transform.translate(
-            offset: Offset(0, -25.w),
+            offset: Offset(-7.w, 27.w),
             child: Stack(
               children: [
                 Row(
@@ -124,7 +126,7 @@ class HomeSection4 extends StatelessWidget {
                           ),
                           SizedBox(height: 1.h),
                           AppTextWidget(
-                            text: 'سيتم ارسال روابط شخصية لكل مدعو من خلال الواتساب أو الرسائل النصية أو البريد الالكتروني (حسب اختيارك)',
+                            text: 'سيتم ارسال روابط شخصية لكل مدعو من خلال\n الواتساب أو الرسائل النصية أو البريد الالكتروني (حسب اختيارك)',
                             fontSize: 5.sp,
                             textAlign: TextAlign.end,
                           ),

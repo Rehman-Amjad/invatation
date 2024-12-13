@@ -5,7 +5,7 @@ import 'app_assets.dart';
 class AppStrings{
 
   static const heroTitle = "الحــين تقــدرون تشـــاركون أفراحــكم و مناسبتكم بطـريقة ممـيزة وعصـرية!";
-  static const heroSubTitle = " اللي يسهل عليكم إرسال دعواتكم  إلكترونية ويوفر لكم تصميمات جميلة ومخصصة تناسب ذوقكم";
+  static const heroSubTitle = " اللي يسهل عليكم إرسال دعواتكم  إلكترونية ويوفر\n لكم تصميمات جميلة ومخصصة تناسب ذوقكم";
 
 
   static const infoPointsList = [
@@ -30,17 +30,17 @@ class AppStrings{
     AppAssets.testImage4,
   ];
 
-  static const cardList = [
+  static const cardList = <Map<String,String>>[
+    {
+      "icon" : AppIcons.personIcon,
+      "text" : "مشرفين",
+      "subTitle" : "مشرفين بزي موحد",
+    },
     {
       "icon" : AppIcons.addIcon,
       "text" : "تصاميم",
       "subTitle" : "تصاميم متنوعة تخدم جميع المناسابات",
     },
-    {
-      "icon" : AppIcons.personIcon,
-      "text" : "مشرفين",
-      "subTitle" : "مشرفين بزي موحد",
-    }
   ];
 
   static const priceCardList = [
@@ -56,6 +56,13 @@ class AppStrings{
     "الشروط و الاحكام",
     "تواصل معانا",
     "المساعدة و الدعم",
+  ];
+
+  static const faqList = [
+    "كيف يمكن لدعوة تحسين حفل الزفاف أو الحدث الخاص بك؟",
+    "كيف يمكنني إنشاء دعوة؟",
+    "كيف يمكنني إرسال دعوتي؟",
+    "كيف يمكنني تتبع الردود والمشاهدات؟",
   ];
 
 }
